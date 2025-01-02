@@ -83,7 +83,7 @@ function Menu() {
                 {item.subOpenIndices.includes(subIndex) ? <FiChevronUp size={20} /> : <FiChevronDown size={20} />}
               </span>
             </button>
-            <div className={`transition-all duration-500 ease-in-out  overflow-hidden ${item.subOpenIndices.includes(subIndex) ? 'max-h-full opacity-100' : 'max-h-0 opacity-0'}`}>
+            <div className={`transition-all duration-500 ease-in-out  overflow-hidden ${item.subOpenIndices.includes(subIndex) ? 'max-h-auto opacity-100' : 'max-h-0 opacity-0'}`}>
               <div className="p-3 text-gray-600 min-h-full ">
                 {category?.itemCards?.map((item, j) => (
                     <div key={j} className="border rounded-lg px-16 py-4 h-ful; shadow-md w-full max-w-full flex items-start z-10 bg-white">
@@ -224,7 +224,7 @@ function Menu() {
               </button>
 
               <div
-                className={`transition-all duration-500 ease-in-out overflow-hidden ${openIndices.includes(index) ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}
+                className={`transition-all duration-500 ease-in-out overflow-hidden ${openIndices.includes(index) ? 'max-h-auto opacity-100' : 'max-h-0 opacity-0'}`}
                 style={{
                   transform: openIndices.includes(index) ? 'scaleY(1)' : 'scaleY(0.95)',
                   transition: 'max-height 0.5s ease, opacity 0.3s ease, transform 0.3s ease',

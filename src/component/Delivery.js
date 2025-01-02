@@ -114,7 +114,7 @@ function Delivery() {
           </div>
         ) : (
           <div className="grid grid-col-1 py-8 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-            {(filterItems.length > 0 ? filterItems : popular).map((restaurant, i) => (
+            {(filterItems.length > 0 ? filterItems : popular || []).map((restaurant, i) => (
               <div key={i} className="min-h-[100px] min-w-[280px] rounded-lg p-2">
                 <Link to={`/RestaurantMenu/${restaurant?.info?.id}`}>
                 

@@ -73,22 +73,21 @@ const Foods = () => {
           )}
 
           {/* Food Image Section */}
-          <div className="h-56 w-full overflow-hidden border-b-2 border-solid border-gray-200">
+          <div className="h-56 w-full overflow-hidden border-b-2 border-solid border-gray-200"> 
             <div
               style={{ transform: `translateX(-${val}%)`, transition: 'transform 0.5s ease-in-out' }}
               className="h-44 flex gap-7 cursor-pointer"
             >
               {foods.map((food, i) => (
                 <div
-                  key={i}
+                  key={food.id+1}
                   className="h-full w-auto rounded-lg flex-shrink-0"
-                  onClick={(e) => e.stopPropagation()} // Prevent event bubbling for the food items
                 >
+                  {console.log(food.id)}
                   <img
                     className="h-full w-auto rounded-lg"
                     src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/${food.imageId}`}
                     alt="foodslider"
-                    onClick={(e) => e.stopPropagation()} // Prevent event bubbling for image clicks
                   />
                 </div>
               ))}

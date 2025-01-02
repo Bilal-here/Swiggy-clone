@@ -39,9 +39,7 @@ function Popular() {
         {!loading && (
           <div className="flex justify-between mb-2">
             <h1 className="text-2xl font-bold text-gray-950">Top Restaurants Chains in Hyderabad</h1>
-            <div className="flex gap-2 text-2xl cursor-pointer">
-            {console.log("this div is clicked")
-              }  
+            <div className="flex gap-2 text-2xl cursor-pointer"> 
             <div className={val>0 ? 'border-2 border-solid bg-gray-200 text-black text-base  rounded-3xl p-2': 'border-2 border-solid bg-gray-200 text-gray-400 text-base rounded-3xl p-2' } onClick={handlePrev}><FaArrowLeft  /></div>
               <div className={val == 1710 ? 'border-2 border-solid text-base  bg-gray-200 text-gray-400  rounded-3xl p-2': 'border-2 border-solid  bg-gray-200 text-black text-base rounded-3xl p-2'}  onClick={handleNext}><FaArrowRight  /></div>
             </div>
