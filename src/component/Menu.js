@@ -44,8 +44,8 @@ function Menu() {
 
   useEffect(() => {
     const url = lat && long 
-      ? `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=${lat}&lng=${long}&restaurantId=${id}&catalog_qa=undefined&submitAction=ENTER`
-      : `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.4400802&lng=78.3489168&restaurantId=${id}&catalog_qa=undefined&submitAction=ENTER`;
+      ? `https://swiggy-proxy-1.onrender.com/api/menu?lat=${lat}&lng=${long}&id=${id}`
+      : `https://swiggy-proxy-1.onrender.com/api/menu?lat=17.4400802&lng=78.3489168&restaurant&id=${id}`;
 
     axios.get(url)
       .then((res) => {

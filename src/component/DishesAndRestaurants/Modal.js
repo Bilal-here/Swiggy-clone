@@ -23,7 +23,7 @@ function Modal({ dish, onClose }) {
         <img
           src={
             dish?.card?.card?.info.imageId
-              ? `https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_500,h_500,c_fit/${dish.card.card.info.imageId}`
+              ? `https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_500,h_500,c_fit/${dish?.card?.card?.info?.imageId}`
               : 'https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
           }
           alt={dish?.card?.card?.info?.name}

@@ -14,7 +14,7 @@ const SideBar = ({ isOpen, toggleSidebar }) => {
 
     useEffect(() => {
         if (input.length >= 3) {
-            axios.get(`https://www.swiggy.com/dapi/misc/place-autocomplete?input=${input}&types=`)
+            axios.get(`https://swiggy-proxy-1.onrender.com/api/location?input=${input}`)
                 .then((res) => {
                     setLocation(res?.data?.data);
                     console.log(res?.data?.data);
@@ -30,7 +30,7 @@ const SideBar = ({ isOpen, toggleSidebar }) => {
 
     useEffect(() => {
         if (restId) {
-            axios.get(`https://www.swiggy.com/dapi/misc/address-recommend?place_id=${restId}`)
+            axios.get(`https://swiggy-proxy-1.onrender.com/api/address-recommend?place_id=${restId}`)
                 .then((res) => {
                     setLat(res?.data?.data[0].geometry?.location?.lat);
                     setLong(res?.data?.data[0].geometry?.location?.lng);

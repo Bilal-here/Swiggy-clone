@@ -12,7 +12,7 @@ function Restaurant({ input }) {
     if (input && input.length > 2) {
       setLoading(true);
       axios
-        .get(`https://www.swiggy.com/dapi/restaurants/search/v3?lat=17.4400802&lng=78.3489168&str=${input}&trackingId=undefined&submitAction=SUGGESTION&queryUniqueId=181a64ea-9b53-f5c2-fb99-84a451867b15`)
+        .get(`https://swiggy-proxy-1.onrender.com/api/restaurant-search?input=${input}`)
         .then((res) => {
           const restaurantData = res?.data?.data?.cards[1]?.groupedCard?.cardGroupMap?.RESTAURANT;
           if (restaurantData) {

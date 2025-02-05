@@ -16,8 +16,8 @@ function Delivery() {
       try {
         const response = await axios.get(
           lat && long
-            ? `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${long}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`
-            : `https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4400802&lng=78.3489168&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`
+            ? `https://swiggy-proxy-1.onrender.com/api/delivery?lat=${lat}&lng=${long}`
+        : `https://swiggy-proxy-1.onrender.com/api/delivery?lat=17.4400802&lng=78.3489168` //https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4400802&lng=78.3489168&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`
         );
         setPopular(response?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
       } catch (error) {

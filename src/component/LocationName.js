@@ -3,7 +3,7 @@ import React, { createContext, useState, useContext } from 'react';
 
 const LocationName = createContext();
 
-// Define the MyProvider outside of SideBar component
+
 export const MyProvider = ({ children }) => {
     const [name, setName] = useState('');
 

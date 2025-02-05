@@ -29,7 +29,8 @@ const Foods = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await axios.get('https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.47832353074318&lng=78.37417326449751&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+        
+        const res = await axios.get(`https://swiggy-proxy-1.onrender.com/api/food`);
         setFoods(res?.data?.data?.cards[0]?.card?.card?.imageGridCards?.info);
       } catch (error) {
         console.error("Error fetching data:", error);

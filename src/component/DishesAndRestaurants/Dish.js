@@ -21,7 +21,7 @@ function Dish({ input }) {
     if (input && input?.length >= 3) {
       setLoading(true);
       axios
-        .get(`https://www.swiggy.com/dapi/restaurants/search/v3?lat=17.4400802&lng=78.3489168&str=${input}&trackingId=undefined&submitAction=ENTER&queryUniqueId=ca695039-e861-0903-c8bf-c205a4cdd78d`)
+        .get(`https://swiggy-proxy-1.onrender.com/api/food-search?input=${input}`)
         .then((res) => {
           if (res?.data?.data?.cards[1]?.groupedCard?.cardGroupMap?.DISH) {
              setDish(res?.data?.data?.cards[1]?.groupedCard?.cardGroupMap?.DISH?.cards?.splice(1));
